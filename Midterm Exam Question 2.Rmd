@@ -1,0 +1,27 @@
+---
+title: "Midterm Exam Question 2"
+subtitle: "STAT 242-02: Intermediate Statistics"
+output: pdf_document
+---
+
+## A (Science Fiction) Study of the Humanoid Inhabitants of the Moon Europa
+
+The year is 2222. Humans have satellites in orbit around Europa, the smallest of Jupiter's four moons. Satellite images have revealed the presence of a small, humanoid race of beings living on the moon's surface. In addition to learning about this humanoid race directly, researchers want to learn more about the geological nature of Europa. On a particular land mass, the researchers note that humanoid settlements are only present in the western region, despite climate being similar across the entire landmass. One scientist suspects that the nitrogen concentration (grams/kilogram) in the soil might be different, and that the [N] in the soil in the inhabited region may be more conducive to growing plants. The scientists collected 50 soil samples from the inhabited region, and 50 from the uninhabited region for analysis and compiled them for you in the data set `europa_soil_df`, which contains the following variables:
+
+- `Region`: the region from which the soil sample was collected; two levels, "Uninhabited" and "Inhabited"
+- `Soil concentration`: nitrogen concentration in the soil sample, in grams/kilogram (g/kg)
+
+
+### Conduct a full analysis to investigate the claim that the mean nitrogen concentration is the same in the two regions. Be sure to include appropriate, well-labeled plots, evaluation of assumptions and any remedies, hypotheses with well defined notation, R code, and conclusions drawn in the context of the problem.   
+
+
+```{r message=FALSE, warning=FALSE}
+library(car)
+library(dplyr)
+library(ggplot2)
+library(gmodels)
+library(readr)
+
+europa_soil_df <- read_csv("https://marievozanne.github.io/stat242/datasets/europa_soil_df.csv")
+```
+
